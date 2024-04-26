@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default site.Language.Lang  }}" {{- with partialCached "func/GetLanguageDirection" "GetLanguageDirection" }} dir="{{ . }}" {{- end }}>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+    {{ hugo.Generator }}
+    {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
+    {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+    {{ $public := not .Params.private }}
+    {{ if and $production $public }}
+      <meta name="robots" content="index, follow">
+    {{ else }}
+      <meta name="robots" content="noindex, nofollow">
+    {{ end }}
+
+    {{ partial "site-style.html" . }}
+    {{ partial "site-scripts.html" . }}
+
+    {{ block "favicon" . }}
+      {{ partialCached "site-favicon.html" . }}
+    {{ end }}
+
+    {{ if .OutputFormats.Get "RSS" }}
+    {{ with .OutputFormats.Get "RSS" }}
+      <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+      <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+      {{ end }}
+    {{ end }}
+
+    {{ if .Params.canonicalUrl }}
+      <link rel="canonical" href="{{ .Params.canonicalUrl }}">
+    {{ else }}
+      <link rel="canonical" href="{{ .Permalink }}">
+    {{ end }}
+
+    <link rel="icon" type="image/x-icon" href="{{ .Site.BaseURL }}img/logo.png">
+
+    {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates */}}
+    {{- template "_internal/opengraph.html" . -}}
+    {{- template "_internal/schema.html" . -}}
+    {{- template "_internal/twitter_cards.html" . -}}
+
+    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+      {{ template "_internal/google_analytics.html" . }}
+    {{ end }}
+	{{ block "head" . }}{{ partial "head-additions.html" . }}{{ end }}
+    <script src="https://kit.fontawesome.com/9a33afeb5f.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-near-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
+
+    {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+    <main role="main">
+      {{ block "main" . }}{{ end }}
+
+      <h2 class="tc" style="margin-top: 150px;">What our customers are saying:</h2>
+      <div class='sk-ww-google-reviews' data-embed-id='25403014'></div><script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
+
+      <div class="schedule">
+        <div>
+          <h2 class="tc mb4">Our working hours:</h2>
+          <table>
+            <tr>
+              <td>Monday</td>
+              <td>11:30AM - 8PM</td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>11:30AM - 8PM</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>11:30AM - 8PM</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>11:30AM - 8PM</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>11:30AM - 8PM</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>Closed</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>Closed</td>
+            </tr>
+            <tr>
+              <td>Phone:</td>
+              <td>(269) 247-5340</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+    {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+  </body>
+</html>

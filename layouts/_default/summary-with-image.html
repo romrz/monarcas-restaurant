@@ -1,0 +1,28 @@
+{{ $featured_image := partial "func/GetFeaturedSummaryImage.html" . }}
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-l align-items-center tc tl-l">
+      {{ if $featured_image }}
+          {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
+        <div class="pr0 pr3-l mb4 w-100 w-70-ns w-40-l">
+          <a href="{{.RelPermalink}}" class="db grow rounded">
+            <img src="{{ $featured_image }}" class="img db" alt="image from {{ .Title }}">
+          </a>
+        </div>
+      {{ end }}
+      <div class="blah w-100 flex flex-column justify-center {{ if $featured_image }} w-60-l {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pr3-ns" "pl3-ns" }}{{ end }}">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="{{.RelPermalink}}" class="color-inherit dim link">
+            {{ .Title }}
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          {{ .Summary | truncate 256 }}
+        </div>
+        <div>
+          <a href="{{.RelPermalink}}" class="b--black ba black br-pill br2 color-inherit dib f7 hover-bg-black-10 link mt2 pa3-l ph2 pv1">{{ $.Param "read_more_copy" | default (i18n "readMore") }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

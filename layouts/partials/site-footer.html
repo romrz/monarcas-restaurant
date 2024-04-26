@@ -1,0 +1,18 @@
+<footer class="{{ .Site.Params.background_color_class | default "bg-dark-gray" }} bottom-0 w-100 pa3" role="contentinfo">
+  <div class="white-90 f4 pv2 ph3 flex-l justify-between">
+    <div class="flex justify-center">
+      <p class="b">
+        Monarca's Ice Cream<br>
+        321 N Grand St<br>
+        Schoolcraft, MI 49087<br>
+      </p>
+    </div>
+  </div>
+
+  <div class="flex justify-between">
+    <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.Home.Permalink }}" >
+      &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
+    </a>
+    <div>{{ partial "social-follow.html" . }}</div>
+  </div>
+</footer>
