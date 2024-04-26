@@ -1,0 +1,61 @@
+/* Put your custom styles here and run `npm start` from the "src" directory on */
+
+#TableOfContents ul li {
+  margin-bottom: 1em;
+}
+
+.lh-copy blockquote {
+  display: block;
+  font-size: .875em;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+
+}
+
+.nested-links a{
+  overflow-wrap: break-word;
+}
+
+.rounded {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+#map {
+  height: 400px; /* The height is 400 pixels */
+  width: 100%; /* The width is the width of the web page */
+}
+
+.text-shadow-black {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.site-logo {
+  max-width: 100px;
+  margin-top: -20px;
+  position: absolute;
+}
+
+.shadow-6 {
+  box-shadow: 4px 4px 8px rgba(0,0,0, 0.4)
+}
+
+.schedule {
+  font-size: 1.3em;
+  background: #96ccff;
+  padding: 3rem 0 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.schedule td {
+  padding-top: 1rem;
+  padding-right: 1rem;
+}
