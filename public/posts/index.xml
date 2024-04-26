@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Monarcas Restaurant</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Monarcas Restaurant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Mar 2024 19:45:04 -0600</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Burritos</title>
+      <link>http://localhost:1313/posts/burritos/</link>
+      <pubDate>Fri, 15 Mar 2024 19:45:04 -0600</pubDate>
+      <guid>http://localhost:1313/posts/burritos/</guid>
+      <description>Burritos by Monarca&amp;rsquo;s Ice Cream Are you looking for authentic burritos in the Schoolcraft area? Then Monarca&amp;rsquo;s Ice Cream is right around the corner. Our burritos are made with quality ingredients to get that perfect flavor. You can trust that we cook your burritos carefully to give them a satisfying flavor in every bite. In addition, we offer vegetarian burritos if you want a healthy alternative without sacrificing flavor. Do not hesitate to visit Monarca&amp;rsquo;s Ice Cream today to learn more about our Mexican restaurant.</description>
+    </item>
+    <item>
+      <title>Quesadillas</title>
+      <link>http://localhost:1313/posts/quesadillas/</link>
+      <pubDate>Thu, 14 Mar 2024 19:49:34 -0600</pubDate>
+      <guid>http://localhost:1313/posts/quesadillas/</guid>
+      <description>Quesadillas by Monarca&amp;rsquo;s Ice Cream Monarca&amp;rsquo;s Ice Cream offers tasty quesadillas as a part of our daily menu in our Mexican restaurant. Quesadillas are a cheesy Mexican food, mainly consisting of tortillas filled with cheese, meat, and spices. Our chefs skillfully cook the dish to melt and bind the fillings together. We only use flavorful ingredients to achieve the perfect taste of our food. Furthermore, we serve tacos and burritos if you want something more filling.</description>
+    </item>
+    <item>
+      <title>Tacos</title>
+      <link>http://localhost:1313/posts/tacos/</link>
+      <pubDate>Thu, 14 Mar 2024 19:48:18 -0600</pubDate>
+      <guid>http://localhost:1313/posts/tacos/</guid>
+      <description>Tacos by Monarca&amp;rsquo;s Ice Cream Monarca&amp;rsquo;s Ice Cream has what you need if you are craving tacos with authentic flavor and spices! We guarantee that our tacos are made to perfection with great flavors you can taste in every bite. We also specialize in serving nachos, tortas, and tamales. We are proud to say that serving quality food within your budget is what we do best at our Mexican restaurant. Do not hesitate to visit Monarca&amp;rsquo;s Ice Cream and taste delectable tacos and other dishes today!</description>
+    </item>
+    <item>
+      <title>Vegetarian Tacos</title>
+      <link>http://localhost:1313/posts/vegetarian_tacos/</link>
+      <pubDate>Wed, 13 Mar 2024 19:48:18 -0600</pubDate>
+      <guid>http://localhost:1313/posts/vegetarian_tacos/</guid>
+      <description>Vegetarian Tacos by Monarca&amp;rsquo;s Ice Cream Monarca&amp;rsquo;s Ice Cream serves tasty vegetarian tacos, cooked and seasoned to perfection for maximum flavor. Our chefs ensure that our plant-based tacos are 100% vegetarian for customers who want a healthier option. We will be transparent about what we put on our food before you bite into one of our tasty, cruel-free dishes. In addition, we offer corn in a cup for customers who want a delicious snack they can enjoy anytime.</description>
+    </item>
+  </channel>
+</rss>

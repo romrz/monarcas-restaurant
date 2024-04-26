@@ -1,0 +1,11 @@
+baseURL = 'https://monarcasrestaurant.com/'
+languageCode = 'en-us'
+title = 'Monarcas Restaurant'
+theme = 'ananke'
+featured_image = 'static/main-image.jpg'
+[[params.ananke_socials]]
+    name = 'facebook'
+    url = 'https://www.facebook.com/people/Monarcas-Ice-Cream/100069932529849'
+
+[params]
+    site_logo = "/img/logo.png"
