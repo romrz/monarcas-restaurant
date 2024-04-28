@@ -1,7 +1,7 @@
 <footer class="{{ .Site.Params.background_color_class | default "bg-dark-gray" }} bottom-0 w-100 pa3" role="contentinfo">
-  <div class="white-90 f4 pv2 ph3 flex-l justify-between">
-    <div class="flex justify-center">
-      <p class="b">
+  <div class="white-90 f4 pv2 ph3 flex-l justify-center">
+    <div class="flex justify-center tc">
+      <p class="b tc">
         Monarca's Ice Cream<br>
         321 N Grand St<br>
         Schoolcraft, MI 49087<br>
@@ -9,10 +9,20 @@
     </div>
   </div>
 
-  <div class="flex justify-between">
-    <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.Home.Permalink }}" >
-      &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
-    </a>
-    <div>{{ partial "social-follow.html" . }}</div>
+  <div class="flex justify-center">
+    <div class="f2">
+      <a class="hover-white no-underline white-90 mr2" href="https://www.facebook.com/people/Monarcas-Ice-Cream/100069932529849/" target="_blank">
+        <i class="fa fa-facebook-official"></i>
+      </a>
+      <a class="hover-white no-underline white-90 mr2" href="https://www.pinterest.com/MonarcasIceCream/" target="_blank">
+        <i class="fa fa-pinterest"></i>
+      </a>
+      <a class="hover-white no-underline white-90 mr2" href="https://www.yelp.com/biz/monarca-s-ice-cream-schoolcraft" target="_blank">
+        <i class="fa fa-yelp"></i>
+      </a>
+    </div>
+  </div>
+  <div class="tc">
+    <p class="white-90">&copy; Monarca's Ice Cream - All rights reserved</p>
   </div>
 </footer>
