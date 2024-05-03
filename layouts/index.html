@@ -12,6 +12,12 @@
     {{/* Derive the section name  */}}
     {{ $section_name := index (.Site.Params.mainSections) 0 }}
 
+    <div class="flex justify-center w-100">
+      <a href="https://order.toasttab.com/online/monarcas-ice-cream" target="_blank" class="order-now-btn">
+        <i class="fa fa-concierge-bell"></i> Order Now
+      </a>
+    </div>
+
     <div class="pa3 pa4-ns w-100 w-70-ns center" id="menu">
       {{/* Use $section_name to get the section title. Use "with" to only show it if it exists */}}
        {{ with .Site.GetPage "section" $section_name }}

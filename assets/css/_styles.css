@@ -63,3 +63,17 @@
 .menu-logo {
   width: 25px;
 }
+
+.order-now-btn {
+  padding: 1.5rem 3rem;
+  background-color: #f55991;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #ccc;
+  text-decoration: none;
+  font-size: 1.4em;
+  color: white;
+  margin-bottom: 4rem;
+}
+.order-now-btn:hover {
+  background-color: #e95389;
+}
