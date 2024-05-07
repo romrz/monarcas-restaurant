@@ -6,11 +6,6 @@
       {{ partial "site-navigation.html" .}}
       <div class="tc pt5 pb6 ph3 ph4-ns shadow-6">
         <img src="{{ .Site.BaseURL }}img/logo.png" alt="Monarca's ice cream" class="w-50 w-25-l" />
-        {{ with .Params.description }}
-          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
-            {{ . }}
-          </h2>
-        {{ end }}
       </div>
     </div>
   </header>

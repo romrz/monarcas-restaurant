@@ -1,7 +1,7 @@
 ---
 title: "Monarca's Ice Cream"
 
-description: ""
+description: "Discover the vibrant flavors of Mexico at Monarca's Ice Cream in Schoolcraft, Michigan. Indulge in our extensive selection of traditional Mexican ice cream flavors alongside authentic dishes like tacos, quesadillas, burritos, birria, tamales, and more. Savor the taste of Mexico right here in Michigan!"
 cascade:
   featured_image: 'main-image.jpg'
 
